@@ -29,9 +29,9 @@ plugins = my-key-auth
 # NGINX
 #------------------------------------------------------------------------------
 
-#proxy_listen = 0.0.0.0:8000 reuseport backlog=16384, 0.0.0.0:8443 http2 ssl reuseport backlog=16384
+proxy_listen = 0.0.0.0:8000 reuseport backlog=16384, 0.0.0.0:8443 http2 ssl reuseport backlog=16384
 #stream_listen = off
-#admin_listen = 0.0.0.0:8001 reuseport backlog=16384, 127.0.0.1:8444 http2 ssl reuseport backlog=16384
+admin_listen = 0.0.0.0:8001 reuseport backlog=16384, 127.0.0.1:8444 http2 ssl reuseport backlog=16384
 #status_listen = off 
 #nginx_user = nobody nobody 
 #nginx_worker_processes = auto  
@@ -72,14 +72,14 @@ plugins = my-key-auth
 # DATASTORE
 #------------------------------------------------------------------------------
 
-#database = postgres          
+database = postgres          
 
-#pg_host = 127.0.0.1           
-#pg_port = 5432               
+pg_host = 192.168.218.128           
+pg_port = 5432               
 #pg_timeout = 5000                         
-#pg_user = kong                 
-#pg_password =                   
-#pg_database = kong              
+pg_user = kong                 
+pg_password =                   
+pg_database = kong              
 #pg_schema =                 
 #pg_ssl = off                  
 #pg_ssl_verify = off             
